@@ -2,74 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Internship 3 — Pinnacle Teleservices | Shreya Dhapekar</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="internship-page.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-container">
-      <h1 class="site-title">Pinnacle Teleservices — Data Analyst Intern</h1>
-      <nav class="site-nav">
-        <ul>
-          <li><a href="index.html#experience">Back</a></li>
-          <li><a href="index.html">Home</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <!-- === SIDEBAR WITH GIF BACKGROUND === -->
+  <aside class="sidebar">
+    <!--<img src="videos/navbar-hero-video.gif" alt="Animated Background" class="bg-video" />-->
+    <div class="overlay"></div>
 
-  <main class="container" style="padding:48px 0;">
-    <h2>Data Analyst Intern — Finance & Accounts | 2025</h2>
+    <nav class="sidebar-nav">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="index.html#hero">🏠 Home</a></li>
+        <li><a href="index.html#experience">📊 Back</a></li>
+        <li><a href="documents/SHREYA DHAPEKAR_resume3.pdf">📘 Resume</a></li>
 
-    <section style="margin-top:18px;">
-      <h3>Overview</h3>
+        <!-- 🔽 Dropdown for Artifacts -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            📂 Artifacts <span class="arrow">▾</span>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="documents/Pinnacle_Offer_Letter.PDF" target="_blank">📄 Offer Letter</a></li>
+            <!-- Completion certificate can be added later -->
+            <!-- <li><a href="documents/Pinnacle_Completion_Certificate.pdf" target="_blank">🎓 Completion Certificate</a></li> -->
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- === MAIN CONTENT === -->
+  <main class="content">
+    <header>
+      <h1>Data Analyst Intern — @Pinnacle Teleservices</h1>
+      <p>2025 | Finance & Accounts • SQL • Power BI • Reporting Automation</p>
+    </header>
+
+    <section id="overview">
+      <h2>Overview</h2>
       <p>
-        Working in the Finance & Accounts department as a Data Analyst Intern, 
-        focusing on financial data interpretation, reporting automation, and 
-        dashboard development to support management decision-making.
+        Working in the Finance & Accounts department as a Data Analyst Intern,
+        focusing on financial data interpretation, reporting automation,
+        and dashboard development to support data-driven management decisions.
       </p>
     </section>
 
-    <section style="margin-top:18px;">
-      <h3>What I learned</h3>
+    <section id="learned">
+      <h2>What I Learned</h2>
       <ul>
-        <li>Understanding core accounting concepts like ledgers, journal entries, revenue tracking, and expense categorization.</li>
-        <li>Transforming raw financial data into structured reports using Excel, SQL, and Power BI.</li>
-        <li>Creating dashboards for financial performance monitoring and KPI analysis.</li>
-        <li>Improving data cleaning, validation, and reconciliation techniques in real-world datasets.</li>
-        <li>Bridging the gap between technical data skills and finance domain knowledge.</li>
+        <li>Understanding accounting concepts such as ledgers, journal entries, revenue tracking, and expense categorization.</li>
+        <li>Transforming raw financial data into structured insights using Excel, SQL, and Power BI.</li>
+        <li>Designing dashboards for financial performance monitoring and KPI analysis.</li>
+        <li>Improving real-world data cleaning, validation, and reconciliation techniques.</li>
+        <li>Bridging technical data skills with finance domain knowledge.</li>
       </ul>
     </section>
 
-    <section style="margin-top:18px;">
-      <h3>Key responsibilities</h3>
+    <section id="responsibilities">
+      <h2>Key Responsibilities</h2>
       <ul>
         <li>Analyzing and organizing financial datasets for internal reporting.</li>
-        <li>Building Power BI dashboards for expense and revenue insights.</li>
+        <li>Building Power BI dashboards for expense and revenue analysis.</li>
         <li>Writing SQL queries to extract and transform transactional data.</li>
-        <li>Supporting automation of recurring reports to reduce manual effort.</li>
-        <li>Collaborating with senior team members to improve reporting workflows.</li>
+        <li>Automating recurring reports to reduce manual effort.</li>
+        <li>Collaborating with senior team members to optimize reporting workflows.</li>
       </ul>
     </section>
-
-    <section style="margin-top:18px;">
-      <h3>Artifacts</h3>
-      <ul>
-        <li><a href="documents/Pinnacle_Teleservices_Offer_Letter.pdf" target="_blank" rel="noopener">Offer letter (PDF)</a></li>
-      </ul>
-    </section>
-
-    <p style="margin-top:28px;">
-      <a class="btn" href="index.html#experience">Back to Experience</a>
-    </p>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Shreya Dhapekar</p>
-    </div>
-  </footer>
+  <!-- JS File -->
+  <script src="scripts.js"></script>
 </body>
-
 </html>
