@@ -2,66 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Internship 2 — SS Infotech Pvt. Ltd. | Shreya Dhapekar</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="internship-page.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-container">
-      <h1 class="site-title">Company B — ML / AI Intern</h1>
-      <nav class="site-nav">
-        <ul>
-          <li><a href="index.html#experience">Back</a></li>
-          <li><a href="index.html">Home</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <!-- === SIDEBAR WITH GIF BACKGROUND === -->
+  <aside class="sidebar">
+    <!--<img src="videos/navbar-hero-video.gif" alt="Animated Background" class="bg-video" />-->
+    <div class="overlay"></div>
 
-  <main class="container" style="padding:48px 0;">
-    <h2>Machine Learning Intern — Winter 2024</h2>
+    <nav class="sidebar-nav">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="index.html#hero">🏠 Home</a></li>
+        <li><a href="index.html#experience">📊 Back</a></li>
+        <li><a href="documents/SHREYA DHAPEKAR_resume3.pdf">📘 Resume</a></li>
 
-    <section style="margin-top:18px;">
-      <h3>Overview</h3>
-      <p>Worked on prototype models and data pipelines for a recommendation/analysis component; supported experimentation and evaluation.</p>
+        <!-- 🔽 Dropdown for Artifacts -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            📂 Artifacts <span class="arrow">▾</span>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="documents/SS_Infotech_Offer_Letter.pdf" target="_blank">📄 Offer Letter</a></li>
+            <li><a href="documents/SS_Infotech_Completion_Certificate.pdf" target="_blank">🎓 Completion Certificate</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- === MAIN CONTENT === -->
+  <main class="content">
+    <header>
+      <h1>ML / AI Intern — @SS Infotech Pvt. Ltd.</h1>
+      <p>Winter 2024 | Machine Learning • Data Pipelines • Model Evaluation</p>
+    </header>
+
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>
+        Worked on prototype machine learning models and data pipelines for a recommendation 
+        and analytics component. Supported experimentation, evaluation, and model comparison 
+        workflows.
+      </p>
     </section>
 
-    <section style="margin-top:18px;">
-      <h3>What I learned</h3>
+    <section id="learned">
+      <h2>What I Learned</h2>
       <ul>
-        <li>Feature engineering and preprocessing techniques for real-world noisy data using pandas.</li>
-        <li>Modeling basics: training, cross-validation and interpreting metrics (precision, recall, AUC).</li>
-        <li>Using scikit-learn for prototyping and simple baselines; tracking experiments and reproducibility.</li>
-        <li>Documenting experiments and communicating results to product and engineering teams.</li>
+        <li>Feature engineering and preprocessing techniques using pandas.</li>
+        <li>Model training, cross-validation, and performance evaluation (precision, recall, AUC).</li>
+        <li>Using scikit-learn for building baseline ML models.</li>
+        <li>Experiment tracking and reproducibility best practices.</li>
+        <li>Communicating technical results to product and engineering teams.</li>
       </ul>
     </section>
 
-    <section style="margin-top:18px;">
-      <h3>Key responsibilities</h3>
+    <section id="responsibilities">
+      <h2>Key Responsibilities</h2>
       <ul>
-        <li>Implemented data pipelines and baseline models</li>
-        <li>Built evaluation notebooks, visualizations and metric dashboards to compare models.</li>
-        <li>Prepared handover docs for productionizing successful experiments.</li>
+        <li>Implemented data preprocessing pipelines and baseline ML models.</li>
+        <li>Built evaluation notebooks and visualizations to compare model performance.</li>
+        <li>Prepared documentation for production-ready experiments.</li>
       </ul>
     </section>
-
-    <section style="margin-top:18px;">
-      <h3>Artifacts</h3>
-      <ul>
-        <li><a href="documents/SS_Infotech_Offer_Letter.pdf" target="_blank" rel="noopener">Offer letter (PDF)</a></li>
-        <li><a href="documents/SS_Infotech_Completion_Certificate.pdf" target="_blank" rel="noopener">Completion certificate (PDF)</a></li>
-
-      </ul>
-    </section>
-
-    <p style="margin-top:28px;"><a class="btn" href="index.html#experience">Back to Experience</a></p>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Shreya Dhapekar</p>
-    </div>
-  </footer>
+  <!-- JS File -->
+  <script src="scripts.js"></script>
 </body>
 </html>
