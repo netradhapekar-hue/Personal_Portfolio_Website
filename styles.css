@@ -31,14 +31,14 @@ body {
   margin: 0 auto;
 }
 
-/* ====== HEADER / NAVBAR ====== */
+/* ====== HEADER / NAVBAR - DARKER VERSION ====== */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #212529;
+  background-color: #1a1c20; /* 2 shades darker than #e8e2d9 */
   color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   padding: 12px 0;
 }
 
@@ -78,11 +78,9 @@ body {
 
 /* ====== HERO SECTION - UPDATED FOR VIDEO BACKGROUND ====== */
 .hero-section {
-  /* background-color: #343a40; <-- Removed */
-  background-color: var(--dark-bg-color); /* Fallback color for browsers that don't load video */
-  position: relative; /* Needed for absolute positioning of video */
-  overflow: hidden; /* Ensures video doesn't extend past the section */
-  color: #fff;
+  background-color: var(--dark-bg-color);
+  position: relative;
+  overflow: hidden;
   text-align: center;
   padding: 120px 20px;
 }
@@ -94,30 +92,30 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the video covers the entire space */
-  z-index: 1; /* Below the content */
-  opacity: 0.2; /* 80% transparency (1 - 0.2 = 0.8 / 80%) */
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.2;
 }
 
 /* Make sure content is above the video */
 .hero-content {
   position: relative;
-  z-index: 2; /* Content overlay */
+  z-index: 2;
 }
 
 .hero-section h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
   margin-bottom: 20px;
+  color: #fff; /* White text for dark theme */
 }
 
 .hero-section p {
   max-width: 700px;
   margin: 0 auto 25px auto;
   font-size: 1.1rem;
-  color: #e9ecef;
+  color: #e9ecef; /* Light gray text for dark theme */
 }
-
 
 .profile-photo {
   width: 180px;
@@ -133,7 +131,6 @@ body {
 .profile-photo:hover {
   transform: scale(1.05);
 }
-
 
 .btn {
   display: inline-block;
@@ -152,7 +149,7 @@ body {
 
 /* ====== ABOUT SECTION - DARK THEME UPDATE ====== */
 .about-section {
-  background-color: var(--light-bg-color); /* Slightly lighter dark shade */
+  background-color: var(--light-bg-color);
   color: var(--text-color);
   padding: 80px 0;
   text-align: center;
@@ -161,12 +158,12 @@ body {
 .about-section h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  color: var(--accent-color); /* Using accent color for headings */
+  color: var(--accent-color);
   margin-bottom: 20px;
 }
 
 .about-section p {
-    color: #ced4da; /* A slightly subdued text color for paragraphs */
+    color: #ced4da;
     max-width: 800px;
     margin: 0 auto 20px auto;
     font-size: 1.05rem;
@@ -191,7 +188,7 @@ body {
 
 /* ====== SKILLS SECTION - DARK THEME UPDATE ====== */
 .skills-section {
-  background-color: var(--dark-bg-color); /* Dark background */
+  background-color: var(--dark-bg-color);
   padding: 80px 0;
   text-align: center;
 }
@@ -228,7 +225,7 @@ body {
 /* Wrapper for all skill boxes */
 .skills-wrapper {
   display: flex;
-  flex-wrap: wrap; /* Wraps to next line on small screens */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
   max-width: 1000px;
@@ -337,33 +334,25 @@ body {
 /* ========  EXPERIENCE CONTENT ====== */
 /* Custom background for the Project Cards inside the Experience Section */
 #experience .project-card {
-    /* Use the lighter dark shade (e.g., #343a40) as the background */
     background-color: var(--light-bg-color); 
-    
-    /* Resetting the hover effect properties to match the simplicity of the skills section */
     transform: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.4); /* Keeping a subtle shadow */
-    
-    /* 1. ADD TRANSITION FOR SMOOTHNESS */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* 2. DEFINE THE HOVER EFFECT */
 #experience .project-card:hover {
-    /* Lifts the card 5 pixels up */
     transform: translateY(-5px); 
-    
-    /* Makes the shadow more pronounced */
     box-shadow: 0 10px 20px rgba(0,0,0,0.6);
 }
     
 /* Ensure text inside the card looks good against the lighter dark background */
 #experience .project-card h3 {
-    color: var(--accent-color); /* Highlight the title */
+    color: var(--accent-color);
 }
 
 #experience .project-card p {
-    color: #ced4da; /* Subdued text */
+    color: #ced4da;
 }
 
 
@@ -392,8 +381,8 @@ body {
 .contact-section input,
 .contact-section textarea {
   padding: 10px;
-  border: 1px solid #495057; /* Darker border */
-  background-color: #495057; /* Darker input background */
+  border: 1px solid #495057;
+  background-color: #495057;
   color: var(--text-color);
   border-radius: 4px;
   width: 100%;
@@ -429,9 +418,402 @@ body {
 
 /* ====== FOOTER - DARK THEME CONSISTENCY ====== */
 .site-footer {
-  background-color: #1c1f23; /* A bit darker than the rest for contrast */
+  background-color: #1c1f23;
   color: #adb5bd;
   text-align: center;
   padding: 20px 0;
   font-size: 0.9rem;
+}
+
+
+/* ====== LIGHT THEME VARIABLES ====== */
+[data-theme="light"] {
+    /* Core colors - light mode with warm undertones */
+    --dark-bg-color: #faf7f2;      /* Warm off-white for main background */
+    --light-bg-color: #fefcf8;     /* Soft cream white for cards */
+    --text-color: #2c3e2f;         /* Deep olive green for primary text */
+    --text-secondary: #5d6b5f;     /* Muted olive for secondary text */
+    --accent-color: #543310;        /* Rich brown accent color */
+    --accent-hover: #74512d;        /* Lighter brown for hover states */
+    --border-color: #e8e2d9;        /* Warm light borders */
+    --shadow-color: rgba(0, 0, 0, 0.08); /* Softer shadows */
+    
+    /* Background adjustments */
+    background-color: #faf7f2;
+    color: #2c3e2f;
+}
+
+/* ====== HEADER / NAVBAR - LIGHT THEME (DARKER) ====== */
+[data-theme="light"] .site-header {
+    background-color: #c7bcab;  /* 2 shades darker than #e8e2d9 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .site-title {
+    color: #543310;
+}
+
+[data-theme="light"] .site-nav a {
+    color: #2c3e2f;
+    font-weight: 600;
+}
+
+[data-theme="light"] .site-nav a:hover {
+    color: #fefcf8;
+}
+
+/* ====== HERO SECTION - LIGHT THEME ====== */
+[data-theme="light"] .hero-section {
+    background-color: #fefcf8;
+}
+
+[data-theme="light"] .profile-photo {
+    border-color: #543310;
+    box-shadow: 0 4px 12px rgba(84, 51, 16, 0.12);
+}
+
+[data-theme="light"] .btn {
+    background-color: #543310;
+    color: #fefcf8;
+    box-shadow: 0 2px 4px rgba(84, 51, 16, 0.25);
+}
+
+[data-theme="light"] .btn:hover {
+    background-color: #74512d;
+    box-shadow: 0 4px 8px rgba(84, 51, 16, 0.3);
+}
+
+/* ====== VIDEO BACKGROUND - LIGHT THEME ONLY - BROWN TEXT ====== */
+[data-theme="light"] .hero-video-background {
+    opacity: 0.35;
+}
+
+[data-theme="light"] .hero-section .hero-content h2,
+[data-theme="light"] .hero-section .hero-content p {
+    color: #543310; /* Rich brown text for light theme hero section */
+}
+
+[data-theme="light"] .hero-section .hero-content h2 .highlight {
+    color: #74512d; /* Slightly lighter brown for highlighted text */
+}
+
+[data-theme="light"] .hero-section .hero-content p {
+    color: #5d6b5f; /* Muted olive for paragraph text in hero */
+}
+
+/* ====== ABOUT SECTION - LIGHT THEME (DARKER, BOLDER) ====== */
+[data-theme="light"] .about-section {
+    background-color: #e8e2d9;  /* Warm taupe - darker than main background */
+    color: #2c3e2f;
+    border-top: 2px solid #543310;
+    border-bottom: 2px solid #543310;
+}
+
+[data-theme="light"] .about-section h2 {
+    color: #543310;
+    font-weight: 800;
+}
+
+[data-theme="light"] .about-section p {
+    color: #2c3e2f;
+    font-weight: 500;
+}
+
+[data-theme="light"] .about-section .btn {
+    background-color: #543310;
+    color: #fefcf8;
+}
+
+[data-theme="light"] .about-section .btn:hover {
+    background-color: #74512d;
+}
+
+/* ====== SKILLS SECTION - LIGHT THEME (LIGHTER) ====== */
+[data-theme="light"] .skills-section {
+    background-color: #fefcf8;
+}
+
+[data-theme="light"] .skills-section h2 {
+    color: #543310;
+    font-weight: 800;
+}
+
+[data-theme="light"] .skill-box {
+    background-color: #faf7f2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e8e2d9;
+}
+
+[data-theme="light"] .skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: #543310;
+}
+
+[data-theme="light"] .skill-box p {
+    color: #5d6b5f;
+    font-weight: 500;
+}
+
+[data-theme="light"] .skill-box:hover p {
+    color: #543310;
+    font-weight: 600;
+}
+
+/* ====== PROJECTS SECTION - LIGHT THEME (DARKER, BOLDER) ====== */
+[data-theme="light"] .projects-section {
+    background-color: #e8e2d9;
+    border-top: 2px solid #543310;
+    border-bottom: 2px solid #543310;
+}
+
+[data-theme="light"] .projects-section h2 {
+    color: #543310;
+    font-weight: 800;
+}
+
+[data-theme="light"] .projects-section h3 {
+    color: #2c3e2f;
+    font-weight: 700;
+}
+
+[data-theme="light"] .project-card {
+    background-color: #fefcf8;
+    color: #2c3e2f;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #d4ccbf;
+}
+
+[data-theme="light"] .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    border-color: #543310;
+}
+
+[data-theme="light"] .project-card p {
+    color: #5d6b5f;
+    font-weight: 500;
+}
+
+[data-theme="light"] .btn-outline {
+    color: #543310;
+    border-color: #543310;
+    font-weight: 600;
+}
+
+[data-theme="light"] .btn-outline:hover {
+    background-color: #543310;
+    color: #fefcf8;
+}
+
+/* ====== EXPERIENCE SECTION - LIGHT THEME (LIGHTER) ====== */
+[data-theme="light"] #experience {
+    background-color: #fefcf8;
+}
+
+[data-theme="light"] #experience h2 {
+    color: #543310;
+    font-weight: 800;
+}
+
+[data-theme="light"] #experience .project-card {
+    background-color: #faf7f2;
+    border: 1px solid #e8e2d9;
+}
+
+[data-theme="light"] #experience .project-card h3 {
+    color: #543310;
+    font-weight: 700;
+}
+
+[data-theme="light"] #experience .project-card p {
+    color: #5d6b5f;
+    font-weight: 500;
+}
+
+[data-theme="light"] #experience .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: #543310;
+}
+
+/* ====== CONTACT SECTION - LIGHT THEME (DARKER, BOLDER) ====== */
+[data-theme="light"] .contact-section {
+    background-color: #e8e2d9;
+    border-top: 2px solid #543310;
+    border-bottom: 2px solid #543310;
+}
+
+[data-theme="light"] .contact-section h2 {
+    color: #543310;
+    font-weight: 800;
+}
+
+[data-theme="light"] .contact-section form {
+    background-color: #fefcf8;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #d4ccbf;
+}
+
+[data-theme="light"] .contact-section input,
+[data-theme="light"] .contact-section textarea {
+    background-color: #ffffff;
+    border: 1px solid #e8e2d9;
+    color: #2c3e2f;
+    font-weight: 500;
+}
+
+[data-theme="light"] .contact-section input:focus,
+[data-theme="light"] .contact-section textarea:focus {
+    border-color: #543310;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(84, 51, 16, 0.15);
+}
+
+[data-theme="light"] .contact-section label {
+    color: #5d6b5f;
+    font-weight: 600;
+}
+
+[data-theme="light"] .contact-section button {
+    background-color: #543310;
+    color: #fefcf8;
+    font-weight: 700;
+}
+
+[data-theme="light"] .contact-section button:hover {
+    background-color: #74512d;
+}
+
+/* ====== FOOTER - LIGHT THEME ====== */
+[data-theme="light"] .site-footer {
+    background-color: #fefcf8;
+    color: #5d6b5f;
+    border-top: 1px solid #e8e2d9;
+}
+
+/* ====== FORM MESSAGE - LIGHT THEME ====== */
+[data-theme="light"] .form-message {
+    color: #28a745;
+    background-color: #faf7f2;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* ====== THEME TOGGLE BUTTON POSITIONING ====== */
+.theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #543310;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(84, 51, 16, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #fefcf8;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 6px 16px rgba(84, 51, 16, 0.5);
+}
+
+.theme-toggle i {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+    transform: rotate(30deg);
+}
+
+/* ====== DARK THEME TOGGLE BUTTON (when in dark mode) ====== */
+[data-theme="dark"] .theme-toggle {
+    background: #ffc107;
+    color: #212529;
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+}
+
+/* ====== RESPONSIVE ADJUSTMENTS FOR LIGHT THEME ====== */
+@media (max-width: 768px) {
+    [data-theme="light"] .site-nav ul {
+        background-color: #c7bcab;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+    
+    [data-theme="light"] .site-nav a {
+        color: #2c3e2f;
+    }
+    
+    [data-theme="light"] .contact-section form {
+        padding: 20px;
+    }
+}
+
+/* ====== ADDITIONAL REFINEMENTS ====== */
+
+/* Smooth transition between themes */
+* {
+    transition: background-color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease,
+                color 0.2s ease;
+}
+
+/* Light mode text selection */
+[data-theme="light"] ::selection {
+    background-color: #543310;
+    color: #fefcf8;
+}
+
+/* Light mode scrollbar */
+[data-theme="light"]::-webkit-scrollbar {
+    width: 10px;
+}
+
+[data-theme="light"]::-webkit-scrollbar-track {
+    background: #faf7f2;
+}
+
+[data-theme="light"]::-webkit-scrollbar-thumb {
+    background: #543310;
+    border-radius: 5px;
+}
+
+[data-theme="light"]::-webkit-scrollbar-thumb:hover {
+    background: #74512d;
+}
+
+/* Card borders in light mode */
+[data-theme="light"] .project-card,
+[data-theme="light"] .skill-box,
+[data-theme="light"] .contact-section form {
+    border: 1px solid #e8e2d9;
+}
+
+/* Hover effects refinement */
+[data-theme="light"] .project-card:hover,
+[data-theme="light"] .skill-box:hover {
+    border-color: #543310;
+}
+
+/* Links in light mode */
+[data-theme="light"] a {
+    color: #543310;
+    font-weight: 600;
+}
+
+[data-theme="light"] a:hover {
+    color: #74512d;
 }
